@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<STYLE TYPE="text/css">
+		#ani-target {
+			position: relative;
+			overflow: hidden;
+			/*height: 16px;*/
+			top: 0px;
+		}
+		#ani-target.close {
+			/*height: 0px;*/
+		}
+		#ani-target.mtop10 {
+			top: -10px;
+		}
+	</STYLE>
+</head>
+<body>
+
+<script id="personTemplate" type="text/template">
+<strong><%= name %></strong> (<%= age %>) <button class="delete">X</button>
+</script>
+
+<script id="edit-personTemplate" type="text/template">
+<input class="name" type="text" value="<%= name %>" style="width:100px;"/><input class="age" type="text" value="<%= age %>" style="width:30px;"/>
+<button class="update">Update</button>
+</script>
+<!--
+<script id="add-personTemplate" type="text/template">
+
+</script>
+-->
+<div id="peopleView">
+	<h3>List</h3>
+	<div id="peopleList"></div>
+	<hr/>
+	<div id="tool-panel">
+		<p>
+			<input id="name" type="text" placeholder="Name" />
+			<input id="age" type="text" placeholder="Age" />
+			<button id="addPeople">Add</button>
+		</p>
+	</div>
+	<hr/>
+	<h3>CustomEvent</h3>
+	<div id="customEvent">
+		<button class="action"></button> status: <span class="status"></span>
+	</div>
+	<hr/>
+	<h3>Animation Testing</h3>
+	<div id="ani-target">TEST</div>
+	<hr/>
+	<div id="ani-tools">
+		<button id="slide">Slide</button>
+	</div>
+</div>
+
+<script src="js/underscore.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/backbone.js"></script>
+<script type="text/javascript" src="js/CSSPlugin.min.js"></script>
+<script src="js/EasePack.min.js"></script>
+<script src="js/TweenLite.min.js"></script>
+<script src="js/jquery.gsap.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
