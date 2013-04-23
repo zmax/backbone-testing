@@ -1,0 +1,80 @@
+#ani-target {
+	position: relative;
+	overflow: hidden;
+	/*height: 16px;*/
+	top: 0px;
+}
+#ani-target.close {
+	/*height: 0px;*/
+}
+#ani-target.mtop10 {
+	top: -10px;
+}
+
+#chat_container {
+	/*font-family: "calibre-1", "calibre-2", helvetica, arial, sans-serif;*/
+	/*background-color: white;*/
+	width: 300px;
+	min-width: 300px;
+
+	position: fixed;
+	right: 0;
+	bottom: -100px;
+	
+/*	border-width: 1px 0 0 1px;
+	border-style: solid;
+	border-color: black;
+
+	-moz-box-shadow: 0px 0px 0px 5px rgba(0,0,0,.2);
+	-webkit-box-shadow: 0px 0px 0px 5px rgba(0,0,0,.2);
+	box-shadow: 0px 0px 0px 5px rgba(0,0,0,.2);*/
+	
+	z-index: 2147483646;
+	text-align: left;
+
+	transition: bottom .5s;
+    -webkit-transition: bottom .5s; /* Chrome & safari */
+    -moz-transition: bottom .5s; /* firefox */
+
+}
+
+#chat_container:hover {
+	bottom: 0;
+}
+
+#chat_container .header {
+	background-color: white;
+	/*position: absolute;*/
+/*	top: 0;
+	left: 0;*/
+
+	height: 25px;
+	min-height: 25px;
+
+	transition: opacity .5s;
+    -webkit-transition: opacity .5s; /* Chrome & safari */
+    -moz-transition: opacity .5s; /* firefox */
+}
+
+#chat_container:hover .header{
+	opacity: 0;
+	/*background-color: rgba(255,255,255,0);*/
+}
+
+#chat_container .avatar {
+	position: relative;
+	background-color: red;
+	height: 100px;
+	min-height: 100px;
+	width: 300px;
+
+	transition: width .5s, right .5s, height .5s;
+    -webkit-transition: width .5s, right .5s, height .5s; /* Chrome & safari */
+    -moz-transition: width .5s, right .5s, height .5s; /* firefox */
+}
+
+#chat_container .avatar:hover {
+	width: 600px;
+	right: 200px;
+	height: 400px;
+}
